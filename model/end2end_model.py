@@ -649,7 +649,7 @@ def build_trainer(model: Model, serialization_dir: str, train_loader: DataLoader
     trainer = GradientDescentTrainer(model=model, serialization_dir=serialization_dir, cuda_device = device, 
                                      data_loader=train_loader, validation_data_loader=dev_loader, 
                                      learning_rate_scheduler = scheduler,
-                                     patience=20, num_epochs=200,
+                                     patience=20, num_epochs=5,
                                      optimizer=optimizer,
                                     validation_metric = "+f1",
                                     )
